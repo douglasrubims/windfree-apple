@@ -137,7 +137,7 @@ struct AccountSettings: View {
             .font(.caption).foregroundStyle(.secondary)
     }
 
-    static let guideURL = URL(string: "https://github.com/douglasrubims/windfree-mac/blob/main/docs/AUTENTICACAO.md")!
+    static let guideURL = URL(string: "https://github.com/douglasrubims/windfree-apple/blob/main/docs/AUTENTICACAO.md")!
 
     @ViewBuilder
     private var currentConnection: some View {
