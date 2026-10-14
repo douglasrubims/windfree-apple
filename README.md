@@ -1,17 +1,63 @@
-# WindFree para Mac, iPhone, iPad e Apple Watch
+<p align="center">
+  <img src="docs/images/icon.png" width="128" height="128" alt="Ícone do WindFree">
+</p>
 
-Aplicativo nativo para controlar ar-condicionado Samsung WindFree pela API oficial do SmartThings. No Mac,
-fica na barra de menus com a temperatura e abre um painel compacto; no iPhone e no iPad, é um app com os
-mesmos controles e layout adaptável; no Apple Watch, controles essenciais com a Digital Crown, funcionando
-sem o iPhone por perto.
+<h1 align="center">WindFree</h1>
 
-Escrito em Swift e SwiftUI, sem Electron, WebView, Node ou SmartThings CLI. O núcleo (API, autenticação,
-interpretação de capacidades, fila de comandos e confirmação) fica num pacote Swift independente de interface,
-compartilhado pelos apps de Mac, iPhone/iPad e Apple Watch.
+<p align="center">
+  Controle do ar-condicionado Samsung WindFree pelo SmartThings no <b>Mac</b>, <b>iPhone</b>, <b>iPad</b> e
+  <b>Apple Watch</b>.<br>
+  Nativo em Swift e SwiftUI · sem Electron, WebView ou Node · licença MIT
+</p>
+
+<p align="center">
+  <img src="docs/images/mac-painel-claro.png" width="330" alt="Painel na barra de menus do Mac, modo claro">
+  <img src="docs/images/mac-painel-escuro.png" width="330" alt="Painel na barra de menus do Mac, modo escuro">
+</p>
+
+No Mac, o WindFree fica na barra de menus com a temperatura e abre um painel compacto. No iPhone e no iPad, é
+um app com os mesmos controles e layout adaptável. No Apple Watch, traz os controles essenciais com a Digital
+Crown e funciona sem o iPhone por perto.
+
+O núcleo (API, autenticação, interpretação de capacidades, fila de comandos e confirmação) fica num pacote
+Swift independente de interface, compartilhado pelos apps de Mac, iPhone/iPad e Apple Watch.
 
 > **Situação:** em uso com um Samsung WindFree 2026 (com aquecimento) no Mac, iPhone e Apple Watch, com login
 > OAuth. Alguns recursos ainda não foram confirmados individualmente no aparelho; veja
 > [docs/VALIDACAO.md](docs/VALIDACAO.md). Projeto pessoal, sem relação com a Samsung.
+
+## Capturas
+
+As capturas usam dados simulados.
+
+<table>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <img src="docs/images/iphone.png" width="300" alt="App do iPhone"><br>
+      <sub>iPhone</sub>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <img src="docs/images/mac-ajustes.png" width="300" alt="Ajustes do aparelho no painel do Mac"><br>
+      <sub>Mac · ajustes do aparelho (modo especial, display, bipe, limpeza, filtro e consumo)</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="docs/images/ipad.png" width="640" alt="App do iPad com a lista de aparelhos por cômodo"><br>
+      <sub>iPad · lista de aparelhos com o cômodo de cada um</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/images/watch.png" width="190" alt="App do Apple Watch"><br>
+      <sub>Apple Watch · temperatura pela Digital Crown</sub>
+    </td>
+    <td align="center">
+      <img src="docs/images/watch-pas.png" width="190" alt="Posição das pás no Apple Watch"><br>
+      <sub>Apple Watch · posição das pás</sub>
+    </td>
+  </tr>
+</table>
 
 ## Recursos
 
@@ -193,8 +239,8 @@ Apps/macOS/WindFree/       Barra de menus, ajustes e integração com o Mac (App
 Apps/iOS/WindFree/         App de iPhone e iPad (inclui a conexão com o Apple Watch)
 Apps/watchOS/WindFree/     App do Apple Watch
 Packages/WindFreeKit/      Núcleo compartilhado (sem SwiftUI/AppKit) e testes
-docs/                      Autenticação, plataformas futuras e validação
-scripts/                   Empacotamento e geração do ícone
+docs/                      Autenticação, plataformas, validação e imagens do README
+scripts/                   Empacotamento, ícone e preparo das capturas do README
 ```
 
 Arquitetura por plataforma: [docs/PLATAFORMAS.md](docs/PLATAFORMAS.md).

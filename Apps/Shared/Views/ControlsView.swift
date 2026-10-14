@@ -132,7 +132,7 @@ struct PanelHeader: View {
                 let subtitle = [model.selectedDevice?.roomName, model.isSimulated ? "Dados simulados" : nil]
                     .compactMap { $0 }.joined(separator: " · ")
                 if !subtitle.isEmpty {
-                    Text(subtitle).font(.caption).foregroundStyle(.secondary)
+                    Text(subtitle).font(.caption).foregroundStyle(.secondary).lineLimit(1)
                 }
             }
             Spacer(minLength: 8)

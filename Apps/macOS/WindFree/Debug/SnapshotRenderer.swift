@@ -120,8 +120,15 @@ enum SnapshotRenderer {
         window.orderFrontRegardless()
         hosting.layoutSubtreeIfNeeded()
         RunLoop.main.run(until: Date().addingTimeInterval(0.4))
-        guard let rep = hosting.bitmapImageRepForCachingDisplay(in: hosting.bounds) else { return }
-        hosting.cacheDisplay(in: hosting.bounds, to: rep)
+        // Sempre em 2x (Retina), independentemente da tela em que a janela invisível cair.
+        let bounds = hosting.bounds
+        guard let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(bounds.width * 2),
+                                         pixelsHigh: Int(bounds.height * 2), bitsPerSample: 8, samplesPerPixel: 4,
+                                         hasAlpha: true, isPlanar: false, colorSpaceName: .deviceRGB,
+                                         bytesPerRow: 0, bitsPerPixel: 0)
+        else { return }
+        rep.size = bounds.size
+        hosting.cacheDisplay(in: bounds, to: rep)
         window.orderOut(nil)
         if let data = rep.representation(using: .png, properties: [:]) {
             try? data.write(to: folder.appendingPathComponent("\(name).png"))
