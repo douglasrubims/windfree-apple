@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "7D3C0B1E-3E0A-4C55-9F1A-2B8C1E6A0F01",
+      "name" : "Configuração padrão",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/WindFreeKit",
+        "identifier" : "WindFreeKitTests",
+        "name" : "WindFreeKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,4 @@
+// Assinatura do app iOS. A equipe (DEVELOPMENT_TEAM) fica em Local.xcconfig, na raiz do repositório,
+// fora do controle de versão. Crie esse arquivo com:  DEVELOPMENT_TEAM = SEU_TEAM_ID
+// (ou escolha o Team no Xcode, ciente de que isso grava o ID no project.pbxproj).
+#include? "../../Local.xcconfig"

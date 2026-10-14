@@ -1,0 +1,57 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/*/.build/
+Packages/*/.swiftpm/
+Package.resolved
+
+# Gerado pelo script de empacotamento
+dist/
+
+# Credenciais, tokens e dados pessoais — nunca versionar
+.env
+.env.*
+*.token
+*.pat
+*secret*
+*credential*
+!**/*Credential*.swift
+*.p12
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+device.json
+devices.json
+local-auth/
+diagnostico*.json
+diagnostics*.json
+*.local.json
+Local.xcconfig
+Secrets.xcconfig
+
+# Ferramentas
+.vscode/
+.idea/
+*.swp
